@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://ed333a.github.io/blog
+url: https://ed333a.github.io/blog  #/blog
 permalink: :year:month:day:hour:minute:second/
 permalink_defaults:
 pretty_urls:
@@ -40,10 +40,10 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
-syntax_highlighter: highlight.js
+syntax_highlighter: prismjs
 highlight:
   line_number: true
   auto_detect: false
@@ -53,6 +53,7 @@ highlight:
 prismjs:
   preprocess: true
   line_number: true
+  line_threshold: 20
   tab_replace: ''
 
 # Home page setting
@@ -61,7 +62,7 @@ prismjs:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 10
+  per_page: 12
   order_by: -date
 
 # Category & Tag
@@ -99,9 +100,36 @@ ignore:
 theme: hexo-theme-matery
 
 # Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
+# Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
   repo: https://github.com/ed333a/blogcomments.git
   branch: main
   message: "deploy"
+
+search:
+  path: search.xml
+  field: post
+
+permalink_pinyin:
+  enable: true
+  separator: '-' # default: '-'
+
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+  
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date  
+  
+  

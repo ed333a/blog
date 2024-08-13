@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>ed333 的博客</title>
+  
+  <subtitle>分享生活、启迪思考</subtitle>
+  <link href="https://ed333a.github.io/blog/atom.xml" rel="self"/>
+  
+  <link href="https://ed333a.github.io/blog/"/>
+  <updated>2024-08-12T05:01:24.375Z</updated>
+  <id>https://ed333a.github.io/blog/</id>
+  
+  <author>
+    <name>ed333</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>InteliJIDEA 配置 Minecraft 插件开发实时调试环境, 并进行断点调试</title>
+    <link href="https://ed333a.github.io/blog/20240812100512/"/>
+    <id>https://ed333a.github.io/blog/20240812100512/</id>
+    <published>2024-08-12T02:05:12.000Z</published>
+    <updated>2024-08-12T05:01:24.375Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;我在开发 MC 服务器插件的时候, 常常因为需要在开发界面和命令行窗口之间来回切换而感到烦恼, 截止到本篇文章成文之前,</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Minecraft, Java" scheme="https://ed333a.github.io/blog/tags/Minecraft-Java/"/>
+    
+  </entry>
+  
+</feed>
