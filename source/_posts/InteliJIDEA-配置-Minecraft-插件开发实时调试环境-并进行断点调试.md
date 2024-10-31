@@ -43,7 +43,7 @@ dependencies {
 
 如果你的插件没有依赖任何外部库, 直接使用 Gradle 项目自带的任务 jar 即可完成构建
 
-![Jar 任务位置](https://ed333a.github.io/blogcomments/images/blog/20240812020512/1.png)
+![Jar 任务位置](https://gitee.com/ed3/imgbed/raw/master/hexo/20240812020512/1.png)
 
 如果你的插件依赖了外部库, 则需要使用 `shadowJar` 的 Gradle 插件来打包外部库, 在 `build.gradle` 文件中添加以下代码:
 
@@ -59,11 +59,11 @@ plugins {
 
 然后重载一下 Gradle 项目, 这时候就会出现 `shadowJar` 任务了
 
-![ShadowJar 任务](https://ed333a.github.io/blogcomments/images/blog/20240812020512/2.png)
+![ShadowJar 任务](https://gitee.com/ed3/imgbed/raw/master/hexo/20240812020512/2.png)
 
 需要注意的是, 不对依赖项进行包位置重定向的话, 直接使用 shadowJar 任务, 会直接把依赖库打包到与插件包名同级的位置, 以下是我的插件对依赖库进行重定向之后的效果
 
-![包位置重定向](https://ed333a.github.io/blogcomments/images/blog/20240812020512/3.png)
+![包位置重定向](https://gitee.com/ed3/imgbed/raw/master/hexo/20240812020512/3.png)
 
 进行包位置重定向也很简单, 只需要在 `build.gradle` 中配置如下代码, 第一个参数是你需要重定向的包, 第二个参数指向你重定向的位置
 
@@ -79,7 +79,7 @@ shadowJar {
 
 为了方便(主要还是我太懒了, 不想再重新配置一个服务端了), 我这边直接换到我之前的一个项目了, 服务端的位置放置没啥要求, 你自己记得就行, 我这边为了方便就直接放到项目目录内了. 服务端内的文件没什么特别的东西, 就是正常的服务端就行.
 
-![服务端内文件](https://ed333a.github.io/blogcomments/images/blog/20240812020512/4.png)
+![服务端内文件](https://gitee.com/ed3/imgbed/raw/master/hexo/20240812020512/4.png)
 
 ### 为 gradle 项目添加一个复制任务
 
@@ -96,27 +96,27 @@ tasks.register('copy', Copy) {
 
 配置好后重新加载 gradle 项目, 看看右侧任务列表中是否有 `copy` 任务, 存在即为配置成功.
 
-![copy 任务位置](https://ed333a.github.io/blogcomments/images/blog/20240812020512/5.png)
+![copy 任务位置](https://gitee.com/ed3/imgbed/raw/master/hexo/20240812020512/5.png)
 
 ### 在 IDEA 中配置调试任务
 
 在 `Run >> Edit Configurations` 中:
 
-![配置调试任务](https://ed333a.github.io/blogcomments/images/blog/20240812020512/6.png)
+![配置调试任务](https://gitee.com/ed3/imgbed/raw/master/hexo/20240812020512/6.png)
 
 该界面往下拉会有一个 `Before Launch` 列表， 表示在执行该任务时会先执行列表中的任务, 执行顺序为自上而下， 将我们之前所提及到的构建插件、复制插件任务添加到这里, 之后直接执行该任务就可以实现插件的构建、复制、运行服务端进行调试了
 
-![Before Launch](https://ed333a.github.io/blogcomments/images/blog/20240812020512/7.png)
+![Before Launch](https://gitee.com/ed3/imgbed/raw/master/hexo/20240812020512/7.png)
 
 ### 运行、运行以及调试
 
-![按钮介绍](https://ed333a.github.io/blogcomments/images/blog/20240812020512/8.png)
+![按钮介绍](https://gitee.com/ed3/imgbed/raw/master/hexo/20240812020512/8.png)
 
 我们来在 `onEnable()` 方法内写一个测试用的程序, 然后点击 "运行以及调试" 按钮来进行断点调试
 
 {% asset_img 9.png "断点示例程序" %}
-![断点示例程序](https://ed333a.github.io/blogcomments/images/blog/20240812020512/9.png)
+![断点示例程序](https://gitee.com/ed3/imgbed/raw/master/hexo/20240812020512/9.png)
 
 调试后可以看到我们的程序成功在断点位置停了下来
 
-![断点测试结果](https://ed333a.github.io/blogcomments/images/blog/20240812020512/10.png)
+![断点测试结果](https://gitee.com/ed3/imgbed/raw/master/hexo/20240812020512/10.png)
